@@ -1,0 +1,15 @@
+services:
+  iptv-epg:
+    image: ghcr.io/konkolorado/iptv-epg:main
+    restart: no
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - OUTPUT_PATH=data/tvguide.xml
+      - MAX_CONNECTIONS=3
+      #- "CRON_SCHEDULE=43 4 * * *"
+      - SITE=tvguide.com
+    volumes:
+      - '${PWD}/tvguide:/epg/data'
+
