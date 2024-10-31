@@ -9,4 +9,4 @@ RUN npm install
 
 ADD entry.sh ./
 
-CMD ["entry.sh"]
+CMD ["sh", "entry.sh"]
