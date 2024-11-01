@@ -9,7 +9,9 @@ services:
       - OUTPUT_PATH=data/tvguide.xml
       - MAX_CONNECTIONS=3
       #- "CRON_SCHEDULE=43 4 * * *"
-      - SITE=tvguide.com
+      #- SITE=tvguide.com
+      - DAYS=2
+      - CHANNELS_FILE=./channels.xml
     volumes:
       - '${PWD}/tvguide:/epg/data'
 
